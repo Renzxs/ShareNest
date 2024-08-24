@@ -33,7 +33,7 @@
 - Clever Cloud (Database)
 
 ---
-# Database Design (ERD)
+## Database Design (ERD)
 
 ![image](https://github.com/user-attachments/assets/9f3369f5-10d4-4310-91eb-6fa286a179d1)
 

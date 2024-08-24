@@ -1,7 +1,5 @@
 # ShareNest | Real Estate Web App
 
----
-
 ## Technologies:
 
 ![image](https://github.com/user-attachments/assets/5768aa8e-5958-486f-8eaf-991d10d34ea2)

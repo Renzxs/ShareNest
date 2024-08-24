@@ -33,7 +33,7 @@
 ---
 ## Database Design (ERD)
 
-![image](https://github.com/user-attachments/assets/9f3369f5-10d4-4310-91eb-6fa286a179d1)
+![image](https://github.com/user-attachments/assets/50c4e545-ebc8-48c8-8dc6-ce2705bf6bc2)
 
 ---
 

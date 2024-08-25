@@ -1,11 +1,22 @@
-import './index.css';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import Home from "./components/Home";
 
 function App() {
-  return (
-    <div className='flex justify-center items-center h-[100vh] w-full'>
-      <h1 className='text-[20px] font-bold font-Poppins'>Hello, ShareNest!</h1>
-    </div>
-  )
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

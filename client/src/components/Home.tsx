@@ -1,17 +1,19 @@
 import { Link } from 'react-router-dom';
 import HomePageSectionOneImg from '../assets/images/home_page_sec1_img.png'
 import HugeDropDown from './layout/HugeDropDown';
-import { Apartment, AttachMoney, LocationOn } from '@mui/icons-material';
+import { Apartment, ArrowForwardIos, AttachMoney, LocationOn } from '@mui/icons-material';
+import PropertiesSlider from './property/PropertiesSlider';
 
 const Home = () => {
   return (
     <div className="bg-Light flex flex-col justify-center items-center">
       <Section1 />
+      <Section2 />
     </div>
   );
 };
 
-// Home Section1
+// Section1
 const Section1 = () => {
   return (
       <section className="w-[90%] flex justify-center items-center flex-wrap gap-10 p-[20px] mt-[80px] max-lg:flex-col max-lg:mt-[160px]">
@@ -39,5 +41,38 @@ const Section1 = () => {
       </section>
   );
 }
+
+// Section2
+const Section2 = () => {
+  return (
+    <section className="w-[90%] flex justify-center items-center flex-wrap mt-[80px] p-[10px] gap-[20px] max-lg:flex-col max-lg:mt-[160px]">
+      {/* Section Title */}
+      <div className='flex justify-between items-center w-full'>
+        <h1 className="font-Poppins text-[40px] text-Dark">Check latest in your area</h1>
+        <Link to={'/'} className='bg-LightGray flex justify-center items-center gap-2 py-[12px] px-[30px] rounded-[30px] hover:opacity-80 w-fit mt-[20px]'>
+              <p className='font-Poppins text-[13px] text-Dark'>View all</p>
+              <ArrowForwardIos sx={{fontSize: 15}} className='text-Dark'/>
+        </Link>
+      </div>
+
+      {/* Properties Slider */}
+      <PropertiesSlider properties_data={[]}/>
+
+      
+      {/* Section Title */}
+      <div className='flex justify-between items-center w-full'>
+        <h1 className="font-Poppins text-[40px] text-Dark">Most liked properties</h1>
+        <Link to={'/'} className='bg-LightGray flex justify-center items-center gap-2 py-[12px] px-[30px] rounded-[30px] hover:opacity-80 w-fit mt-[20px]'>
+              <p className='font-Poppins text-[13px] text-Dark'>View all</p>
+              <ArrowForwardIos sx={{fontSize: 15}} className='text-Dark'/>
+        </Link>
+      </div>
+
+      {/* Properties Slider */}
+      <PropertiesSlider properties_data={[]}/>
+    </section>
+  );
+}
+
 
 export default Home;

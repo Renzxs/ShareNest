@@ -1,5 +1,9 @@
 interface HugeDropDown {
-    icon: any;
+    icon: IntrinsicAttributes;
     title: string;
     value: string;
+}
+
+interface PropertiesSlider {
+    properties_data: any [];
 }

@@ -105,7 +105,7 @@ const Section3 = () => {
 // Section 4
 const Section4 = () => {
   return (
-    <section className="w-[100%] h-[50vh] flex justify-center items-center flex-wrap mt-[80px] gap-[50px] bg-Gray">
+    <section className="w-[100%] flex justify-center items-center flex-wrap mt-[80px] gap-[50px] bg-Gray py-[50px]">
       <div className='w-[50%] flex flex-col items-center gap-[20px]'>
         <h1 className='font-Poppins font-semibold text-center text-Dark text-[40px]'>Embark on Your Extraordinary Real Estate Journey Today</h1>
         <p className='font-Poppins text-[13px] text-Dark text-center w-[60%]'>Join the ranks of satisfied homeowners who have entrusted us with their real estate journey</p>

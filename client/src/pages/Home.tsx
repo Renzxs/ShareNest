@@ -1,14 +1,17 @@
 import { Link } from 'react-router-dom';
 import HomePageSectionOneImg from '../assets/images/home_page_sec1_img.png'
-import HugeDropDown from './layout/HugeDropDown';
-import { Apartment, ArrowForwardIos, AttachMoney, LocationOn } from '@mui/icons-material';
-import PropertiesSlider from './property/PropertiesSlider';
+import HugeDropDown from '../components/layout/HugeDropDown'
+import { AccountCircle, Apartment, ArrowForwardIos, AttachMoney, FavoriteBorder, LocationOn } from '@mui/icons-material';
+import PropertiesSlider from '../components/property/PropertiesSlider';
+import dummydata from '../api/dummydata';
+import PropertiesGrid from '../components/property/PropertiesGrid';
 
 const Home = () => {
   return (
     <div className="bg-Light flex flex-col justify-center items-center">
       <Section1 />
       <Section2 />
+      <Section3 />
     </div>
   );
 };
@@ -16,7 +19,7 @@ const Home = () => {
 // Section1
 const Section1 = () => {
   return (
-      <section className="w-[90%] flex justify-center items-center flex-wrap gap-10 p-[20px] mt-[80px] max-lg:flex-col max-lg:mt-[160px]">
+      <section className="w-[90%] flex justify-center items-center flex-wrap gap-10 p-[20px] mt-[80px]">
         <div className='flex-1 flex flex-col justify-between gap-[40px]'>
           {/* Home Title */}
           <div>
@@ -56,11 +59,13 @@ const Section2 = () => {
       </div>
 
       {/* Properties Slider */}
-      <PropertiesSlider properties_data={[]}/>
+      <PropertiesSlider 
+        animation_speed={4000} 
+        properties_data={dummydata}/>
 
       
       {/* Section Title */}
-      <div className='flex justify-between items-center w-full'>
+      <div className='flex justify-between items-center w-full mt-[50px]'>
         <h1 className="font-Poppins text-[40px] text-Dark">Most liked properties</h1>
         <Link to={'/'} className='bg-LightGray flex justify-center items-center gap-2 py-[12px] px-[30px] rounded-[30px] hover:opacity-80 w-fit mt-[20px]'>
               <p className='font-Poppins text-[13px] text-Dark'>View all</p>
@@ -69,10 +74,27 @@ const Section2 = () => {
       </div>
 
       {/* Properties Slider */}
-      <PropertiesSlider properties_data={[]}/>
+      <PropertiesSlider 
+        animation_speed={5000} 
+        properties_data={dummydata}/>
     </section>
   );
 }
+
+// Section3
+const Section3 = () => {
+  return (
+    <section className="w-[90%] flex justify-center items-center flex-wrap mt-[80px] p-[10px] gap-[50px] max-lg:flex-col max-lg:mt-[160px]">
+      {/* Section Title */}
+      <div className='flex justify-center items-center w-full'>
+        <h1 className="font-Poppins text-[40px] text-Dark text-center ">Explore inspiring modern houses designs</h1>
+      </div>
+      
+      <PropertiesGrid properties_data={dummydata}/>
+
+    </section>
+  )
+} 
 
 
 export default Home;

@@ -4,8 +4,8 @@ import SearchBar from './SearchBar';
 
 const Navbar = () => {
   return (
-    <div className=' p-[10px] fixed w-full'>
-      <div className='bg-Gray h-auto rounded-[10px] flex justify-around gap-[20px] items-center px-[30px] flex-wrap max-md:p-[10px] backdrop-blur-md bg-LightGray/30'>
+    <div className=' p-[10px] fixed w-full z-50'>
+      <div className='bg-Gray h-auto rounded-[10px] flex justify-around gap-[20px] items-center px-[30px] max-md:p-[10px] backdrop-blur-md bg-LightGray/30'>
         {/* Left Container */}
         <div className='flex items-center gap-[20px]'>
           {/* ShareNest Logo */}

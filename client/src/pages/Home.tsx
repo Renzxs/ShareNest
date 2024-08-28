@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import HomePageSectionOneImg from '../assets/images/home_page_sec1_img.png'
 import HugeDropDown from '../components/layout/HugeDropDown'
-import { AccountCircle, Apartment, ArrowForwardIos, AttachMoney, FavoriteBorder, LocationOn } from '@mui/icons-material';
+import { Apartment, ArrowForwardIos, AttachMoney, LocationOn } from '@mui/icons-material';
 import PropertiesSlider from '../components/property/PropertiesSlider';
 import dummydata from '../api/dummydata';
 import PropertiesGrid from '../components/property/PropertiesGrid';
@@ -12,6 +12,7 @@ const Home = () => {
       <Section1 />
       <Section2 />
       <Section3 />
+      <Section4 />
     </div>
   );
 };
@@ -48,7 +49,7 @@ const Section1 = () => {
 // Section2
 const Section2 = () => {
   return (
-    <section className="w-[90%] flex justify-center items-center flex-wrap mt-[80px] p-[10px] gap-[20px] max-lg:flex-col max-lg:mt-[160px]">
+    <section className="w-[90%] flex justify-center items-center flex-wrap mt-[80px] p-[10px] gap-[20px]">
       {/* Section Title */}
       <div className='flex justify-between items-center w-full'>
         <h1 className="font-Poppins text-[40px] text-Dark">Check latest in your area</h1>
@@ -84,17 +85,36 @@ const Section2 = () => {
 // Section3
 const Section3 = () => {
   return (
-    <section className="w-[90%] flex justify-center items-center flex-wrap mt-[80px] p-[10px] gap-[50px] max-lg:flex-col max-lg:mt-[160px]">
+    <section className="w-[90%] flex justify-center items-center flex-wrap mt-[80px] p-[10px] gap-[50px]">
       {/* Section Title */}
       <div className='flex justify-center items-center w-full'>
         <h1 className="font-Poppins text-[40px] text-Dark text-center ">Explore inspiring modern houses designs</h1>
       </div>
       
-      <PropertiesGrid properties_data={dummydata}/>
+      <div className='flex justify-center items-center flex-col'>
+        <PropertiesGrid properties_data={dummydata}/>
 
+        <Link to={'/'} className='bg-Dark flex justify-center items-center py-[12px] px-[30px] rounded-[30px] hover:opacity-80 w-fit mt-[20px]'>
+              <p className='font-Poppins text-[13px] text-Light'>Browse more post</p>
+        </Link>
+      </div>
     </section>
   )
 } 
 
+// Section 4
+const Section4 = () => {
+  return (
+    <section className="w-[100%] h-[50vh] flex justify-center items-center flex-wrap mt-[80px] gap-[50px] bg-Gray">
+      <div className='w-[50%] flex flex-col items-center gap-[20px]'>
+        <h1 className='font-Poppins font-semibold text-center text-Dark text-[40px]'>Embark on Your Extraordinary Real Estate Journey Today</h1>
+        <p className='font-Poppins text-[13px] text-Dark text-center w-[60%]'>Join the ranks of satisfied homeowners who have entrusted us with their real estate journey</p>
+        <Link to={'/'} className='bg-Dark flex justify-center items-center py-[12px] px-[30px] rounded-[30px] hover:opacity-80 w-fit mt-[20px]'>
+              <p className='font-Poppins text-[13px] text-Light'>Get Started</p>
+        </Link>
+      </div>
+    </section>
+  );
+}
 
 export default Home;

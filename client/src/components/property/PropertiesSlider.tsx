@@ -23,7 +23,7 @@ const PropertiesSlider = ({properties_data, animation_speed}:PropertiesSlider) =
             properties_data.map((property, index) => (
                 <SwiperSlide key={index}>
                     <Link to={property.hreflink} className='transition-all duration-300 hover:scale-[102%] flex flex-col justify-start gap-[20px]'>
-                    <img src={property.image} alt={property.image} className='object-cover rounded-[20px] w-[500px] h-[450px]'/>
+                    <img src={property.image} alt={property.image} className='object-cover rounded-[20px] h-[450px]'/>
                     <div className='flex justify-between items-center px-[10px] gap-[10px]'>
                         <div>
                             <p className='font-Poppins font-semibold text-[15px] text-Dark'>{property.location} - ₱{property.price_per_month}</p>

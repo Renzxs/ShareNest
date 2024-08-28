@@ -20,7 +20,7 @@ const SearchBar = () => {
           {/* Search Type */}
           <TuneIcon onClick={onClickSearchType} className='text-Dark mr-[10px] hover:opacity-80 cursor-pointer'/>
           {/* Search Input */}
-          <div className='bg-Light flex justify-normal items-center gap-[10px] rounded-[10px]'>
+          <div className='bg-Light flex justify-normal items-center gap-[10px] rounded-[10px] w-full'>
             <Search className='text-Dark ml-[15px]'/>
 
             <input 

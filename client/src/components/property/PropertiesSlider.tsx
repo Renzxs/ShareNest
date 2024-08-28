@@ -14,6 +14,7 @@ const PropertiesSlider = ({properties_data, animation_speed}:PropertiesSlider) =
         autoplay={{
           disableOnInteraction: false, 
         }}
+        loop={true}
         modules={[Autoplay]}
         slidesPerView={3}
         onSlideChange={() => console.log('slide change')}

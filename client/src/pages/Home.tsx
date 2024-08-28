@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
-    <div className="bg-Light flex flex-col justify-center items-center">
+    <div className="bg-Light flex flex-col justify-center items-center overflow-hidden">
       <Section1 />
       <Section2 />
       <Section3 />

@@ -1,5 +1,4 @@
 import dummyImg1 from '../assets/images/dummy_img1.png';
-import dummyImg2 from '../assets/images/dummy_img2.png';
 import dummyImg3 from '../assets/images/home_page_sec1_img.png';
 
 // Dummy Data

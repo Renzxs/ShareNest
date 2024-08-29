@@ -6,6 +6,7 @@ import PropertiesSlider from '../components/property/PropertiesSlider';
 import dummydata from '../api/dummydata';
 import PropertiesGrid from '../components/property/PropertiesGrid';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const Home = () => {
   return (
@@ -20,6 +21,13 @@ const Home = () => {
 
 // Section1
 const Section1 = () => {
+  const [location, setLocation] = useState<string>('');
+  const handleLocationChange = (value: string) => {setLocation(value)};
+  const [propertyType, setPropertyType] = useState<string>('');
+  const handlePropertyTypeChange = (value: string) => {setPropertyType(value)};
+  const [priceRange, setPriceRange] = useState<string>('');
+  const handlePriceRangeChange = (value: string) => {setPriceRange(value)};
+
   return (
       <section className="w-[90%] flex justify-center items-center flex-wrap gap-10 p-[20px] mt-[80px] max-sm:mt-[100px] max-lg:flex-col">
         <div className='flex-1 flex flex-col justify-between gap-[40px]'>
@@ -39,19 +47,31 @@ const Section1 = () => {
             <motion.div 
               variants={{ initial: {opacity: 0, y: 100,},
               animate: {opacity: 1, y: 1, transition: { delay: 0.05, duration: 1.2 }}}} initial="initial" whileInView="animate">
-              <HugeDropDown icon={<LocationOn className='text-Dark'/>} title='Location' value='Metro Manila, Philippines'/>
+              <HugeDropDown 
+                onSelectChange={handleLocationChange}
+                icon={<LocationOn className='text-Dark'/>} 
+                title='Location' 
+                selection_data={['Caloocan City, Philippines', 'Quezon City, Philippines', 'Manila City, Philippines', 'Cebu City, Philippines']}/>
             </motion.div>
 
             <motion.div 
               variants={{ initial: {opacity: 0, y: 100,},
               animate: {opacity: 1, y: 1, transition: { delay: 0.05, duration: 1.2 }}}} initial="initial" whileInView="animate">
-              <HugeDropDown icon={<Apartment className='text-Dark'/>} title='Property Type' value='Condominium'/>
+              <HugeDropDown 
+                onSelectChange={handlePropertyTypeChange}
+                icon={<Apartment className='text-Dark'/>} 
+                title='Property Type' 
+                selection_data={['Apartment', 'Condominuim', 'Hotels', 'Retail']}/>
             </motion.div>
 
             <motion.div
                 variants={{ initial: {opacity: 0, y: 100,},
                 animate: {opacity: 1, y: 1, transition: { delay: 0.05, duration: 1.2 }}}} initial="initial" whileInView="animate">
-              <HugeDropDown icon={<AttachMoney className='text-Dark'/>} title='Price range' value='₱900 - ₱1,500'/>
+              <HugeDropDown 
+                onSelectChange={handlePriceRangeChange}
+                icon={<AttachMoney className='text-Dark'/>} 
+                title='Price range' 
+                selection_data={['₱900 - ₱1,500', '₱2,000 - ₱3,500', '₱4,500 - ₱5,500', '₱6,000 or higher']}/>
             </motion.div>
           </div>
         </div>

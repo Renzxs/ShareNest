@@ -1,7 +1,8 @@
 interface HugeDropDown {
     icon: IntrinsicAttributes;
     title: string;
-    value: string;
+    selection_data: string [];
+    onSelectChange: (value: string) => void;
 }
 
 interface PropertiesSlider {

@@ -38,7 +38,7 @@ const Navbar = () => {
             <p className='font-Poppins text-[13px] text-Light text-nowrap'>Sign in</p>
           </Link>
 
-          <div className='hiddenmax-lg:block'>
+          <div className='hidden max-lg:block'>
             { isMenuOpen ? (
                 <Close onClick={() => setIsMenuOpen(false)} className='text-Dark cursor-pointer hover:opacity-70'/>
               )
